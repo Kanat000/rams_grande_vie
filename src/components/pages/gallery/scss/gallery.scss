@@ -1,0 +1,88 @@
+@import '../../../../assets/style/mixins';
+@import '../../../../assets/style/variables';
+
+.vie-gallery-container{
+  width: 100%;
+  display: grid;
+  grid-row-gap: 3.833vw;
+  .gallery-content-container{
+    display: flex;
+    margin: 0 3.333vw;
+    column-gap: 37.917vw;
+    align-items: center;
+  }
+  .gallery-title-block{
+    @include useFontStyle($fs:$l1-fs-vw);
+    font-family: "Prata", sans-serif;
+    text-transform: uppercase;
+  }
+  .gallery-controller-block{
+    display: flex;
+    column-gap: 2.667vw;
+  }
+  .gallery-slider-inner-container{
+    max-width: 100vw;
+  }
+}
+
+.vie-gallery-slider-controllers{
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.833vw;
+  button{
+    @include disableDefaultButtonStyle();
+    width: 4.167vw;
+    height: 4.167vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.1vw solid $black;
+    svg{
+      width: 2vw;
+      height: 2vw;
+      object-fit: contain;
+    }
+  }
+}
+.vie-gallery-carousel {
+  height: 42vw;
+  .slick-list{
+    padding-left: 1vw;
+  }
+}
+.vie-gallery-slide-container{
+  width: 41.667vw;
+  height: 41.667vw;
+  margin-left: 2.5vw;
+  position: relative;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider-modal-opener{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    button{
+      @include disableDefaultButtonStyle();
+      width: 4.167vw;
+      height: 4.167vw;
+      z-index: 2;
+      svg{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+

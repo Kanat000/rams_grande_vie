@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./fonts";
+
+@mixin useFontStyle($fs: $normal-fs-vw, $fc: $black, $ff:'TT Interfaces', $lh:125%, $fw:normal){
+  font-size: $fs;
+  font-family: $ff, sans-serif;
+  font-weight: $fw;
+  color: $fc;
+  line-height: $lh;
+}
+
+@mixin disableDefaultButtonStyle(){
+  background-color: inherit;
+  border: none;
+  outline:none;
+  padding: 0;
+  cursor: pointer;
+}

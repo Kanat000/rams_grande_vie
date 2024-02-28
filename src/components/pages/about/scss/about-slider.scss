@@ -1,0 +1,64 @@
+@import '../../../../assets/style/variables';
+@import '../../../../assets/style/mixins';
+
+.vie-detailed-about-container{
+  width: 93.333vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  >div{
+    height: 47.75vw;
+  }
+  .detailed-left-block{
+    display: grid;
+    grid-template-rows: 17.75vw 30vw;
+    div:first-child{
+      @include useFontStyle();
+      p{
+        width: 85%;
+      }
+      span:first-child{
+         color: $brown;
+      }
+    }
+    img{
+      height: 25vw;
+    }
+  }
+  .detailed-center-block{
+    img{
+      height: 43vw;
+    }
+  }
+  .detailed-right-block{
+    display: grid;
+    grid-template-rows: 30vw 17.75vw;
+    img{
+      height: 25vw;
+    }
+  }
+}
+
+.vie-about-carousel-container{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-row-gap: 1.667vw;
+  align-items: center;
+  @include useFontStyle();
+  .vie-about-carousel{
+    width: 30vw;
+    overflow: hidden;
+    height: 100%;
+    img{
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+.about-carousel-title{
+  h5{
+    @include useFontStyle();
+  }
+}
+}

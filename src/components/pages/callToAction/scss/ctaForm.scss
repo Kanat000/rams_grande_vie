@@ -1,0 +1,49 @@
+@import '../../../../assets/style/variables';
+@import '../../../../assets/style/mixins';
+@import '../../../../assets/style/fonts';
+
+.vie-cta-form-container {
+  display: grid;
+  grid-row-gap: 2.5vw;
+  width: 30.75vw;
+  margin: auto;
+
+  .cta-confirm{
+    text-align: center;
+    @include useFontStyle($fc: $white, $fs: $sm-fs-vw);
+    p:last-child{
+      color: $brown;
+    }
+  }
+  .cta-action{
+    width: 100%;
+    button{
+      width: 100%;
+      padding: 0.83vw 0;
+      border-radius: 100px;
+      border: 0.1vw solid $beige;
+      background-color: transparent;
+      @include useFontStyle($fc: $white)
+    }
+  }
+}
+
+.vie-cta-input-container {
+  width: 100%;
+
+  > input {
+    width: 100%;
+    border: none;
+    border-bottom: 0.1vw solid $beige;
+    background-color: transparent;
+    padding-bottom: 1.333vw;
+    outline: none;
+    border-radius: 0;
+    @include useFontStyle($fc: $beige);
+
+    &::placeholder {
+      color: $beige;
+    }
+  }
+
+}

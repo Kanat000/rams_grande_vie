@@ -1,0 +1,39 @@
+@import '../../../../assets/style/variables';
+@import '../../../../assets/style/mixins';
+@import '../../../../assets/style/fonts';
+
+.vie-call-to-action-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vw;
+  .cta-content-block{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+  }
+  .cta-content-inner-block{
+    width: 40.25vw;
+    display: grid;
+    grid-row-gap: 2.5vw;
+  }
+  .cta-title{
+    width: 85%;
+    margin: auto;
+    @include useFontStyle($fs:3vw, $ff: Prata, $fc: $beige);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .cta-figure-block{
+    background-image: url("../../../../assets/image/cta/cta-bg.png");
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 30.833vw;
+      height: 32.167vw;
+      object-fit: cover;
+    }
+  }
+}
