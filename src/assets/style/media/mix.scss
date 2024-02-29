@@ -1,0 +1,248 @@
+@import "../variables";
+@import "../mixins";
+
+
+@media (max-width: 630px) {
+  .vie-general-about-container {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+    .general-info-figure {
+      height: 280px;
+    }
+    .general-info-desc {
+      width: 100%;
+      grid-row-gap: 50px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .vie-main-container {
+    height: 140vh;
+    .main-inner-container {
+      height: 90vh;
+    }
+  }
+  .vie-detailed-info-mobile {
+    .mb-detailed-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .vie-location-container {
+    .location-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .location-body{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .location-aside {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+    }
+  }
+  .vie-location-circle {
+    width: 250px;
+    height: 250px;
+    &:nth-child(2n+1){
+      justify-self: flex-end;
+    }
+    .vie-location-inner-container {
+      grid-row-gap: 16px;
+    }
+    .circle-title-container {
+      font-size: 21.109px;
+    }
+    .vie-icon-text-container {
+      column-gap: 8.8px;
+      div:first-child {
+        width:  21.109px;
+        height:  21.109px;
+      }
+      div:last-child {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .vie-video-switch-container {
+      width: 220px;
+      height: 80px;
+    .video-switcher-button{
+      &:hover{
+        >.video-switcher-figure{
+          transform: translateX(135px);
+          z-index: 5;
+        }
+        >.video-switcher-content{
+          transform: translateX(-50px);
+        }
+      }
+    }
+    .video-switcher-figure {
+      width: 66px;
+      height: 66px;
+    }
+    .video-switcher-content {
+      width: 120px;
+      font-size: 16px;
+    }
+  }
+
+  .vie-path-creator-container {
+    grid-row-gap: 20px;
+    h3, p{font-size: 16px; line-height: 130%; text-align: center}
+    .path-creator-address{
+      width: 200px;
+    }
+    .path-creator-action {
+      display: grid;
+      justify-content: center;
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+
+  .vie-compass-container{
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .vie-header-container {
+    top: 59px;
+  }
+  .vie-main-container {
+    height: 125vh;
+    .main-inner-container {
+      height: 75vh;
+    }
+    .main-title{
+      width: 90vw;
+      h1{
+        font-size: 36px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .vie-call-to-action-container{
+    .cta-content-block{
+      height: auto;
+      padding: 30px;
+    }
+    .cta-figure-block{
+      height: auto;
+      padding: 30px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .vie-cta-form-container {
+    width: 90%;
+  }
+
+  .vie-plan-container {
+    .plan-svg-title {
+      height: 55px;
+
+    }
+    .plan-h1-title{
+      font-size: 36px;
+    }
+  }
+
+  .vie-infrastructure-carousel-container {
+    .vie-infra-carousel {
+      height: 150vw;
+    }
+  }
+  .vie-infra-card-container {
+    max-width: 80vw;
+    .card-figure {
+      max-width: 80vw;
+      max-height: 100vw;
+    }
+    .card-number{
+      display: none;
+    }
+    .card-desc {
+      width: 100%;
+    }
+  }
+
+  .vie-infrastructure-carousel-container {
+    .vie-infra-carousel {
+      width: 300%;
+    }
+  }
+
+
+  .vie-location-container {
+    .location-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      justify-items: center;
+      margin-top: 40px;
+    }
+  }
+
+  .vie-location-circle {
+    width: 280px;
+    height: 280px;
+    &:nth-child(2n+1){
+      justify-self: unset;
+    }
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .vie-plan-container{
+    .plan-controller-container{
+      width: 100vw;
+      margin: 0;
+      overflow: scroll;
+      &::-webkit-scrollbar{
+        width: 0;
+      }
+    }
+  }
+
+  .vie-plan-radio-select{
+    min-width: 440px;
+    margin: 0 20px;
+  }
+
+  .vie-plan-card-container{
+    min-width: 300px;
+  }
+  .vie-location-container {
+    .location-aside {
+      display: grid;
+      grid-row-gap: 30px;
+      justify-items: center;
+    }
+    .location-map {
+      width: 100vw;
+      height: 1100px;
+      svg {
+        width: 100%;
+        height: 100%;
+        transform: scale(2.5) translateX(-50px);
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

@@ -9,7 +9,9 @@ const InfraCarousel = () => {
         touchMove:true,
         variableWidth:true,
         swipeToSlide:true,
-        infinite:false
+        infinite:false,
+        slidesToShow: 2,
+        slidesToScroll: 1
     }
     const slides = useContext(StateContext)
     return (

@@ -1,0 +1,286 @@
+@import "../variables";
+@import "../mixins";
+
+
+@media (max-width: 750px) {
+  .vie-landing-container{
+    grid-row-gap: 50px;
+  }
+
+  //----header----
+  .vie-header-container.header-in-scroll{
+    padding: 2vw 0;
+  }
+  .vie-back-to-main-container{
+    padding: 2vw 3vw;
+    .back-to-main-inner-container {
+      font-size: 12px;
+      svg{
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .vie-header-container {
+    top: 10vw;
+    .header-grid{
+      width: auto;
+      margin: 0 6.25vw;
+      column-gap: 0;
+    }
+    .header-nav-container {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      font-size: 16px;
+      .flexible-nav-container{
+        flex-direction: column;
+        position: fixed;
+        background-color: $black;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        row-gap: 10.667vw;
+        justify-content: center;
+        z-index: 9;
+      }
+      .header-menu-list{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        row-gap: 5vw;
+      }
+      .header-menu-action-block{
+        flex-direction: column;
+        flex-grow: 0;
+      }
+    }
+    .header-logo-block{
+      width: 110.001px;
+      z-index: 10;
+    }
+    .header-logo{
+      height: 25.242px;
+    }
+  }
+  .vie-mobile-header-container{
+    z-index: 10;
+  }
+
+
+  //----main----
+  .vie-main-container{
+    height: 130vh;
+
+    .main-inner-container{
+      height: 80vh;
+    }
+    .main-content{
+      top: 20vh;
+      grid-row-gap: 30px;
+    }
+    .main-title{
+      width: 70vw;
+      h1{
+        font-size: 48px;
+      }
+    }
+    .main-cta{
+      width: 70vw;
+      display: flex;
+      justify-content: center;
+      button{
+        width: 80%;
+        padding: 15px 30px;
+        font-size: 12.917px;
+        &:hover{
+          padding: 15px 40px;
+        }
+      }
+    }
+    .main-figure{
+      height: 427px;
+      bottom: -350px;
+      border-radius: 12px;
+    }
+    .main-figure-inner-container{
+      >button{
+        width: 177px;
+        height: 54px;
+        top: -23px;
+      }
+    }
+  }
+
+
+  //------About-------
+
+  .vie-about-container{
+    gap: 100px;
+  }
+  .vie-general-about-container{
+    column-gap: 20px;
+    >div{
+      flex-grow: 1;
+    }
+    .general-info-figure{
+      width: auto;
+    }
+    .general-info-desc{
+      width: 50vw;
+      grid-row-gap: 6vw;
+      font-size: 16px;
+    }
+
+  }
+
+ //-----CTA--------
+  .vie-call-to-action-container{
+    grid-template-columns: 1fr;
+    height: auto;
+    .cta-content-block{
+      height: 500px;
+    }
+    .cta-title{
+      font-size: 36px;
+    }
+    .cta-content-inner-block{
+      width: 100%;
+      grid-row-gap: 30px;
+    }
+    .cta-figure-block{
+      height: 500px;
+      img{
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+  .vie-cta-form-container {
+    grid-row-gap: 30px;
+    width: 70%;
+    .cta-confirm{
+      font-size: 12px;
+    }
+    .cta-action{
+      button{
+        padding: 10px 0;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+
+  }
+  .vie-cta-input-container {
+    > input {
+      font-size: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+
+  //-------Plan------
+
+
+  .vie-plan-container{
+    grid-row-gap: 50px;
+    .plan-controller-container{
+      justify-content: unset;
+      width: auto;
+      margin: 0 20px;
+    }
+
+    .vie-plan-body-container{
+      row-gap: 30px;
+    }
+    .plan-card-grid-container{
+      width: 100vw;
+      display: flex;
+      column-gap: 10px;
+      margin: 0;
+      overflow-x: auto;
+      &::-webkit-scrollbar{
+        width: 0;
+      }
+    }
+  }
+  .vie-plan-radio-select{
+    width: 100%;
+    button{
+      width: auto;
+      flex-grow: 1;
+      font-size: 16px;
+      border-bottom: 1px solid $gray-207;
+    }
+  }
+  .vie-plan-card-container{
+    min-width: 350px;
+    grid-gap: 10px;
+    .card-figure{
+      height: 360px;
+    }
+    .card-content{
+        height: 70px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 130%;
+    }
+    &:first-child{
+      margin-left: 20px;
+    }
+    &:last-child{
+      margin-right: 20px;
+    }
+  }
+
+  //--------infrastructure------
+
+  .vie-infrastructure-container {
+    grid-row-gap: 30px;
+    .infra-title-grid {
+      flex-direction: column;
+      row-gap: 30px;
+      margin: 0 20px;
+    }
+    .infra-svg-title {
+      height: 50px;
+    }
+    .infra-h1-title {
+      font-size: 36px;
+    }
+    .infra-desc-title {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .vie-infrastructure-carousel-container {
+    .vie-infra-carousel {
+      height: 100vw;
+      .slick-list{
+        padding-left: 10px;
+      }
+    }
+  }
+  .vie-infra-card-container {
+    margin-left: 20px;
+    grid-row-gap: 30px;
+    .card-content {
+      font-size: 16px;
+      grid-row-gap: 20px;
+    }
+    .card-desc {
+      width: 100%;
+    }
+  }
+
+  //--------location---------
+
+  .vie-location-container {
+    padding: 50px 0;
+    .location-title {
+      font-size: 36px;
+    }
+  }
+}

@@ -17,10 +17,10 @@ const DetailedInfo = () => {
                 </div>
             </div>
             <div className={'detailed-center-block'}>
-                <AboutCarousel initial_delay={1500}/>
+                <AboutCarousel initial_delay={2000}/>
             </div>
             <div className={'detailed-right-block'}>
-                <AboutCarousel initial_delay={2000}/>
+                <AboutCarousel initial_delay={3000}/>
             </div>
         </div>
     );

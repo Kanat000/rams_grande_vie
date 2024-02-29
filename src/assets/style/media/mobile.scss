@@ -1,0 +1,194 @@
+@import "../variables";
+@import "../mixins";
+
+@media (max-width: 360px) {
+  .vie-main-container {
+    height: 800px;
+
+    .main-inner-container {
+      height: 550px;
+    }
+
+    .main-content {
+      top: 100px;
+      grid-row-gap: 30px;
+    }
+
+    .main-title {
+      width: auto;
+      margin: 0 20px;
+
+      h1 {
+        font-size: 24px;
+        line-height: 150%;
+      }
+    }
+
+    .main-cta {
+      width: auto;
+      margin: 0 20px;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .main-figure {
+      width: auto;
+      left: 20px;
+      right: 20px;
+      height: 427px;
+      bottom: -249px;
+      border-radius: 12px;
+    }
+  }
+
+
+  // ------ About -------------------
+  .vie-general-about-container {
+    width: auto;
+    margin: 0 20px;
+    row-gap: 50px;
+
+    .general-info-desc {
+      text-align: center;
+      row-gap: 50px;
+    }
+
+    .general-specific-p {
+      border-left: unset;
+      padding-left: unset;
+      position: relative;
+      margin-top: 32px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 1px;
+        background-color: $brown;
+      }
+
+    }
+  }
+
+
+  //----------CTA---------
+  .vie-call-to-action-container {
+    .cta-title {
+      font-size: 24px;
+      line-height: 130%;
+      width: 100%;
+    }
+  }
+  .vie-cta-form-container {
+    width: 100%;
+
+    .cta-confirm {
+      font-size: 10px;
+    }
+  }
+
+
+  //---------Plan------
+  .vie-plan-container {
+    .plan-svg-title {
+      height: 36px;
+
+    }
+
+    .plan-h1-title {
+      font-size: 24px;
+    }
+  }
+
+  .vie-plan-radio-select {
+    min-width: 360px;
+    margin: 0 20px;
+  }
+
+  .vie-plan-card-container {
+    min-width: 260px;
+
+    .card-figure {
+      height: 250px;
+
+      img {
+        margin: 10px;
+      }
+    }
+
+    .card-content {
+      height: auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      p{
+        line-height: 110%;
+      }
+      > div {
+        > div {
+          padding: 10px 0;
+        }
+
+        > button {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+//-----------infrastructure--------
+  .vie-infra-card-container {
+    max-width: 70vw;
+    .card-figure {
+      max-width: 70vw;
+      max-height: 90vw;
+    }
+    .card-number{
+      display: none;
+    }
+    .card-desc {
+      width: 100%;
+    }
+  }
+
+  .vie-infrastructure-carousel-container {
+    .vie-infra-carousel {
+      height: 180vw;
+    }
+  }
+ //-------location-----
+  .vie-location-container {
+    .location-title {
+      font-size: 24px;
+    }
+  }
+  .vie-video-switch-container {
+
+    width: 280px;
+    .video-switcher-button{
+      column-gap: 20px;
+      &:hover{
+        >.video-switcher-figure{
+          transform: translateX(185px);
+          z-index: 5;
+        }
+        >.video-switcher-content{
+          transform: translateX(-50px);
+        }
+      }
+    }
+    .video-switcher-content {
+      width: 165px;
+    }
+    .video-switcher-figure {
+      svg {
+        width: 22px;
+        height: 32px;
+        object-fit: contain;
+      }
+    }
+  }
+}

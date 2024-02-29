@@ -23,6 +23,11 @@
       border-radius: 100px;
       border: 0.1vw solid $beige;
       background-color: transparent;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+      &:hover{
+        border-color: $brown;
+      }
       @include useFontStyle($fc: $white)
     }
   }

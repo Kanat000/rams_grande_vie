@@ -1,7 +1,10 @@
 @import "./variables";
 @import "./fonts";
 
-@mixin useFontStyle($fs: $normal-fs-vw, $fc: $black, $ff:'TT Interfaces', $lh:125%, $fw:normal){
+@mixin useFontStyle($fs: $normal-fs-vw, $fc: $black, $ff:'TT Interfaces', $lh:125%, $fw:normal, $sr: 'L'){
+  @if $sr == 'S' {
+    $fs : $normal-fs-px
+  }
   font-size: $fs;
   font-family: $ff, sans-serif;
   font-weight: $fw;

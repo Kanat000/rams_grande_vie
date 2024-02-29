@@ -75,15 +75,25 @@
     width: 100%;
     height: 100%;
     @include disableDefaultButtonStyle();
-    display: grid;
-    grid-template-columns: 5.5vw 8vw;
+    display: flex;
+    padding-right: 1vw;
     border: 0.1vw solid $gray-207;
     border-radius: 200vw;
     align-items: center;
     justify-content: center;
     column-gap: 1.6vw;
-  }
+    &:hover{
+      >.video-switcher-figure{
+        transform: translateX(9.2vw);
+        z-index: 5;
+      }
+      >.video-switcher-content{
+        transform: translateX(-6vw);
+      }
+    }
 
+  }
+  
   .video-switcher-figure {
     width: 5.5vw;
     height: 5.5vw;
@@ -92,7 +102,7 @@
     align-items: center;
     background-size: cover;
     border-radius: 50%;
-
+    transition: .3s ease-in-out;
     svg {
       width: 1.833vw;
       height: 2.667vw;
@@ -103,6 +113,7 @@
   .video-switcher-content {
     width: 6.75vw;
     @include useFontStyle($ff: 'TT Interfaces Bold');
+    transition: .3s ease-in-out;
     text-transform: uppercase;
     text-align: left;
   }
@@ -148,4 +159,14 @@
 }
 
 
+
+@keyframes _switchOn {
+  0%{
+    transform: translateX(0);
+   }
+
+  100%{
+    transform: translateX(200px);
+  }
+}
 

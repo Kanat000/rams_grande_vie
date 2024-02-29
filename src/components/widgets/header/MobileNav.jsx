@@ -6,8 +6,8 @@ const MobileNav = ({setNavIsHidden}) => {
     return (
         <div className={'vie-mobile-header-container'}
              onClick={() => setNavIsHidden(prev => !prev)}>
-            <div><MobMenuLineIcon/></div>
-            <div><MobMenuLineIcon/></div>
+            <MobMenuLineIcon/>
+            <MobMenuLineIcon/>
         </div>
     );
 };

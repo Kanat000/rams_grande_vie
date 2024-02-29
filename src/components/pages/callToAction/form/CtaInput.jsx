@@ -12,13 +12,12 @@ const CtaInput = (props) => {
             {maskOptions ?
                 <InputMask {...register(name, {required: isRequired})} mask={maskOptions.mask}
                            id={`rs-form-${name}-input`}
-                           placeholder={placeholder} autoComplete={autoComplete ? autoComplete : name}
-                           style={isError ? {borderBottomColor: 'red'} : {}}/>
+                           placeholder={placeholder}
+                           style={isError ? {borderBottomColor: 'red'} : {}} />
 
                 : <input type="text" placeholder={placeholder} id={`rs-form-${name}-input`}
                          {...register(name, {required: isRequired, pattern: pattern})}
-                         style={isError ? {borderBottomColor: 'red'} : {}}
-                         autoComplete={autoComplete ? autoComplete : name}/>
+                         style={isError ? {borderBottomColor: 'red'} : {}}/>
 
             }
         </div>

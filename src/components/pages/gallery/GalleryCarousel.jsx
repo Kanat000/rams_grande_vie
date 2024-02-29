@@ -2,17 +2,19 @@ import React from 'react';
 import {Carousel} from "antd"
 import GallerySlide from "./GallerySlide.jsx";
 
-const GalleryCarousel = () => {
+const GalleryCarousel = ({sliderRef}) => {
     const settings = {
         dots:false,
         touchMove:true,
         variableWidth:true,
         swipeToSlide:true,
         infinite:false,
-        draggable: true
+        draggable: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
     }
     return (
-        <Carousel {...settings} className={'vie-gallery-carousel'}>
+        <Carousel {...settings} ref={sliderRef} className={'vie-gallery-carousel'}>
             <GallerySlide />
             <GallerySlide />
             <GallerySlide />

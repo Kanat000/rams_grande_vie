@@ -39,10 +39,17 @@
     align-items: center;
     border-radius: 50%;
     border: 0.1vw solid $black;
+    &:hover{
+      svg{
+        transform: scale(1.2);
+
+      }
+    }
     svg{
       width: 2vw;
       height: 2vw;
       object-fit: contain;
+      transition: .3s ease-in-out;
     }
   }
 }
@@ -77,10 +84,18 @@
       width: 4.167vw;
       height: 4.167vw;
       z-index: 2;
+      transition: .3s ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+        svg{
+          transform: rotate(180deg);
+        }
+      }
       svg{
         width: 100%;
         height: 100%;
         object-fit: contain;
+        transition: .3s ease-in-out;
       }
     }
   }

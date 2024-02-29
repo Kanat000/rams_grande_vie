@@ -6,9 +6,9 @@
   position: fixed;
   top:4.167vw;
   left: 0;
-  right: 0;
+  right: 0.45vw;
   background-color: $black;
-  z-index: 99999;
+  z-index: 10;
   transition: .1s ease-in-out;
 
   .header-grid{
@@ -100,7 +100,19 @@
   }
 }
 
-
+.vie-mobile-header-container{
+  display: none;
+  width: 45px;
+  grid-row-gap: 5px;
+  >svg{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  @media (max-width: 750px) {
+    display: grid;
+  }
+}
 .vie-header-container.header-in-scroll{
   top:0;
   padding: 1vw 0;

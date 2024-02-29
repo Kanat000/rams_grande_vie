@@ -5,9 +5,11 @@ import Landing from "./components/Landing.jsx";
 function App() {
 
   return (
-      <BrowserRouter>
-        <Landing />
-      </BrowserRouter>
+      <div className={'vie-app-container'}>
+          <BrowserRouter>
+            <Landing />
+          </BrowserRouter>
+      </div>
   )
 }
 

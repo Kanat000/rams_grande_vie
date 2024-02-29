@@ -33,15 +33,18 @@
     top: 101%;
     left: 0;
     width: 100%;
-    background-color: rgba(245, 240, 234, 0.7);
+    background-color: $beige;
     display: grid;
     grid-row-gap: 0.2vw;
     @include useFontStyle();
     >div{
       padding: 0.9vw 1.7vw;
       cursor: pointer;
+      transition: .2s ease-in-out;
+
       &:hover{
-        background-color: $beige;
+        background-color: $brown;
+        color: $white;
       }
       &:last-child{
         border-radius: 0 0 2vw 2vw;

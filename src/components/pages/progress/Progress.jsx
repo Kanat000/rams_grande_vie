@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import './scss/progress.scss'
 import ProgressGraph from "./ProgressGraph.jsx";
 import ProgressVideo from "./ProgressVideo.jsx";
+import {useInView} from "framer-motion";
+import {useSmoothCountUpEffect} from "../../../hooks/useSmoothCountUpEffect.js";
 
 const Progress = ({pageRef}) => {
+    const progressGraphRef = useRef();
+    const isInView = useInView(progressGraphRef);
+    const [progressPercent, setProgressPercent] = useState(0)
+    useSmoothCountUpEffect(isInView, setProgressPercent, 85)
 
     return (
         <div className={'vie-progress-container'} ref={pageRef}>
@@ -18,8 +24,8 @@ const Progress = ({pageRef}) => {
             <div className={'progress-video-block'}>
                 <ProgressVideo />
             </div>
-            <div className={'progress-graph-block'}>
-                <ProgressGraph name={'Строительные работы завершены на'} percent={85}/>
+            <div className={'progress-graph-block'} ref={progressGraphRef}>
+                <ProgressGraph name={'Строительные работы завершены на'} percent={progressPercent}/>
             </div>
         </div>
     );
