@@ -1,11 +1,11 @@
 import React from 'react';
 import slider1 from "../../../assets/image/about/slider1_1.jpg";
 
-const MbDetailedContent = () => {
+const MbDetailedContent = ({img, name}) => {
     return (
         <div className={'mb-detailed-content'}>
-            <div><img src={slider1} alt={slider1}/></div>
-            <div><h5>Relax зоны</h5></div>
+            <div><img src={img} alt={img}/></div>
+            <div><h5>{name}</h5></div>
         </div>
     );
 };

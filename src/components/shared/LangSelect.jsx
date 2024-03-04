@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {LangDropDownSvg} from "../../assets/svg/VieSvgStore.jsx";
+import './scss/shared.scss'
+import MobileLangSelect from "./MobileLangSelect.jsx";
 
-const LangSelect = () => {
+const LangSelect = ({isMobile}) => {
     const langList = ['kz', 'ru', 'en', 'tr']
     const [currentLang, setCurrentLang] = useState(langList[1])
     const [dropped, setDropped] = useState(false)
@@ -10,6 +12,10 @@ const LangSelect = () => {
         setDropped(false)
         setCurrentLang(lang)
     }
+
+    if (isMobile)
+        return <MobileLangSelect langList={langList} currentLang={currentLang}
+                                 setCurrentLang={setCurrentLang}/>
 
     return (
         <div className={'vie-lang-select-container'}>

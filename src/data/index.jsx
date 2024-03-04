@@ -1,4 +1,10 @@
 import plan_4_1 from '../assets/image/plan/plan-4-1.png'
+import about_1 from '../assets/image/about/slider_relax.jpg'
+import about_2 from '../assets/image/about/slider1_2.jpg'
+import about_3 from '../assets/image/about/slider1_1.jpg'
+import about_4 from '../assets/image/about/slider2_2.jpg'
+import about_5 from '../assets/image/about/slider3_1.jpg'
+import about_6 from '../assets/image/about/slider3_2.jpg'
 import infraSlider_1 from '../assets/image/infra/slider_1.png'
 import infraSlider_2 from '../assets/image/infra/slider_2.png'
 import infraSlider_3 from '../assets/image/infra/slider_3.jpeg'
@@ -6,11 +12,26 @@ import infraSlider_4 from '../assets/image/infra/slider_4.jpeg'
 import infraSlider_5 from '../assets/image/infra/slider_5.jpeg'
 import infraSlider_6 from '../assets/image/infra/slider_6.jpeg'
 import infraSlider_7 from '../assets/image/infra/slider_7.jpeg'
+import Exterior1 from '../assets/image/gallery/exterior_1.png'
+import Exterior2 from '../assets/image/gallery/exterior_2.png'
+import Exterior4 from '../assets/image/gallery/exterior_4.png'
+import Exterior5 from '../assets/image/gallery/exterior_5.png'
+import Exterior6 from '../assets/image/gallery/exterior_6.png'
+import Exterior3 from '../assets/image/gallery/exterior_3.png'
+import Interior1 from '../assets/image/gallery/interior_1.jpeg'
+import Interior2 from '../assets/image/gallery/interior_2.jpeg'
+import Interior3 from '../assets/image/gallery/interior_3.jpeg'
+import Interior4 from '../assets/image/gallery/interior_4.jpeg'
+import Interior5 from '../assets/image/gallery/interior_5.jpeg'
+import Interior6 from '../assets/image/gallery/interior_6.jpeg'
 
 export const plans = [
-    {figure: plan_4_1, rooms: 4, area: '100,7'},
-    {figure: plan_4_1, rooms: 4, area: '100,7'},
-    {figure: plan_4_1, rooms: 4, area: '100,7'}
+    {figure: plan_4_1, rooms: 4, area: '100,7',type:''},
+    {figure: plan_4_1, rooms: 4, area: '105.4',type:''},
+    {figure: plan_4_1, rooms: 4, area: '99.5',type:''},
+    {figure: plan_4_1, rooms: 3, area: '95.65', type:''},
+    {figure: plan_4_1, rooms: 3, area: '76.7', type:'veranda'},
+    {figure: plan_4_1, rooms: 2, area: '26.7', type:'veranda'}
 ]
 
 export const infra_sliders = [
@@ -58,3 +79,39 @@ export const infra_sliders = [
     },
 
 ]
+
+
+export const GallerySliders = {
+    'exterior': [Exterior1, Exterior2, Exterior3, Exterior4, Exterior5, Exterior6],
+    'interior': [Interior1, Interior2, Interior3, Interior4, Interior5, Interior6],
+    'hall': [Exterior4, Exterior3, Interior5, Interior6, Exterior2]
+}
+
+
+export const AboutCards = [
+    {img: about_1, name: 'Relax зоны'},
+    {img: about_2, name: 'Чистый воздух и горы рядом'},
+    {img: about_3, name: 'Ритм города в гармонии с природой'},
+    {img: about_4, name: 'Workout и игровые комплексы'},
+    {img: about_6, name: 'Chill зоны'}
+]
+export const AboutSliders = {
+    first: {
+        name: 'Relax зоны',
+        sliders: [
+            about_1, about_5, about_6
+        ]
+    },
+    second: {
+        name: 'Чистый воздух и горы рядом',
+        sliders: [
+            about_2, about_3, about_4
+        ]
+    },
+    third: {
+        name: 'Ритм города в гармонии с природой',
+        sliders: [
+            about_4, infraSlider_3, infraSlider_7
+        ]
+    }
+}

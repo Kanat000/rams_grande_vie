@@ -4,6 +4,7 @@ import ProgressGraph from "./ProgressGraph.jsx";
 import ProgressVideo from "./ProgressVideo.jsx";
 import {useInView} from "framer-motion";
 import {useSmoothCountUpEffect} from "../../../hooks/useSmoothCountUpEffect.js";
+import Modal from "../../widgets/modal/Modal.jsx";
 
 const Progress = ({pageRef}) => {
     const progressGraphRef = useRef();

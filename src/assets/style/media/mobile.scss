@@ -2,6 +2,25 @@
 @import "../mixins";
 
 @media (max-width: 360px) {
+  //-------------------header---------
+  .vie-back-to-main-container{
+    padding: 8px 23px;
+
+  }
+  .vie-header-container {
+    .header-grid{
+      margin: 0 20px;
+    }
+    .header-nav-container {
+      .flexible-nav-container{
+        row-gap: 64px;
+      }
+      .header-menu-list{
+        row-gap: 30px;
+      }
+    }
+  }
+  //-------------------main-------------
   .vie-main-container {
     height: 800px;
 
@@ -190,5 +209,39 @@
         object-fit: contain;
       }
     }
+  }
+
+  //---------Gallery------
+  .vie-gallery-container .gallery-title-block{
+    font-size: 24px;
+  }
+  .vie-gallery-select-container{
+    width: 230px;
+  }
+  .vie-gallery-carousel {
+    height: 260px;
+    .slick-list{
+      padding-left: 10px;
+    }
+  }
+  .vie-gallery-slide-container{
+    width: 260px;
+    height: 260px;
+  }
+
+  //------Progress--------
+  .vie-progress-container {
+    .progress-content-block {
+      h1{
+        font-size: 24px;
+        max-width: 90%;
+      }
+    }
+  }
+
+
+  .vie-youtube-video-container{
+    width: 95vw;
+    height: 60vw;
   }
 }

@@ -1,13 +1,12 @@
 import React from 'react';
-import Slide1 from "../../../assets/image/gallery/slide-1.jpg";
 import {PlusInCircleSvg} from "../../../assets/svg/VieSvgStore.jsx";
 
-const GallerySlide = () => {
+const GallerySlide = ({slide, openModalByIndex, index}) => {
     return (
         <div className={'vie-gallery-slide-container'}>
-            <img src={Slide1} alt={Slide1}/>
+            <img src={slide} alt={slide}/>
             <div className={'slider-modal-opener'}>
-                <button><PlusInCircleSvg/></button>
+                <button onClick={()=>openModalByIndex(index)}><PlusInCircleSvg/></button>
             </div>
         </div>
     );

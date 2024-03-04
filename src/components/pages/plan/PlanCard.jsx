@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from "../../widgets/modal/Modal.jsx";
+import CtaModal from "../../widgets/CtaModal/CtaModal.jsx";
 
 const PlanCard = ({figure, rooms, area}) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
         <div className={'vie-plan-card-container'}>
+            <Modal visible={modalIsOpen} setVisible={setModalIsOpen}>
+                <CtaModal />
+            </Modal>
             <div className={'card-figure'}>
                 <img src={figure} alt={figure} className={'card-figure-img'}/>
             </div>
@@ -20,7 +26,7 @@ const PlanCard = ({figure, rooms, area}) => {
                     </div>
                 </div>
                 <div>
-                    <button>
+                    <button onClick={()=>setModalIsOpen(true)}>
                         <p>Узнать</p>
                         <p>цену</p>
                     </button>

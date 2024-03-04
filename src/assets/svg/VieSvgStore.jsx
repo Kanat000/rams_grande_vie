@@ -143,3 +143,13 @@ export const LangDropDownSvg = () => {
         </svg>
     );
 };
+
+export const GallerySliderArrowSvg = () => {
+    return (
+        <svg  width="94" height="94" viewBox="0 0 94 94" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M39 68L60 47L39 26" stroke="black" vectorEffect="non-scaling-stroke"
+                 ></path>
+        </svg>
+    );
+};

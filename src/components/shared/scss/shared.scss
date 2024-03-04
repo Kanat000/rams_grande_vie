@@ -47,3 +47,47 @@
     }
   }
 }
+.vie-lang-select-container {
+  .current-lang {
+    display: flex;
+    align-items: center;
+
+    div:last-child {
+      cursor: pointer;
+      width: 2vw;
+      height: 2vw;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .lang-options {
+    position: absolute;
+    top: 102%;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+
+    > div {
+      width: 100%;
+      padding: 0.2vw 0;
+      cursor: pointer;
+
+      &:hover {
+        color: $brown;
+      }
+    }
+  }
+}
+
+.vie-mobile-lang-select{
+  display: flex;
+  column-gap: 10px;
+  .mob-lang-active{
+    color: $brown;
+  }
+}

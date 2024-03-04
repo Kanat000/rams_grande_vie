@@ -6,10 +6,13 @@ import {useEventListener} from "../../../hooks/useEventListener.jsx";
 
 const Nav = () => {
     const [navIsHidden, setNavIsHidden] = useState(window.matchMedia('(max-width: 750px)').matches)
+    const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 750px)').matches)
+
     useEventListener({
         mediaQuery : window.matchMedia('(max-width: 750px)'),
         handler: ()=>{
             setNavIsHidden(window.matchMedia('(max-width: 750px)').matches)
+            setIsMobile(window.matchMedia('(max-width: 750px)').matches)
         },
         event: 'change',
         depsArray: []
@@ -19,13 +22,12 @@ const Nav = () => {
     return (
         <div className={'header-nav-container'}>
 
-            <MobileNav  setNavIsHidden={setNavIsHidden}/>
+            <MobileNav navIsHidden={navIsHidden} setNavIsHidden={setNavIsHidden}/>
 
             <div className={'flexible-nav-container'}
                  style={navIsHidden ? {display:'none'} : {display:'flex'}}
-                 onScroll={(e)=>{console.log('jdkee'); e.preventDefault()}}
+                 onScroll={(e)=>{e.preventDefault()}}
                  onTouchMove={(e)=>{e.preventDefault()}}
-                 onScrollCapture={()=>{console.log('swpkjswlkjw')}}
                 >
 
                 <Menu />
@@ -35,7 +37,7 @@ const Nav = () => {
                     <div className={'header-call-link'}>+ 7 707 212 44 44</div>
 
                     <div className={'header-lang-select-block'}>
-                        <LangSelect />
+                        <LangSelect isMobile={isMobile}/>
                     </div>
                 </div>
 

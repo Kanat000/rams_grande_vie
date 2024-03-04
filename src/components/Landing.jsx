@@ -6,7 +6,7 @@ import About from "./pages/about/About.jsx";
 import CallToAction from "./pages/callToAction/CallToAction.jsx";
 import {createContext, useRef} from "react";
 import Plan from "./pages/plan/Plan.jsx";
-import {infra_sliders, plans} from "../data/index.jsx";
+import {AboutCards, AboutSliders, GallerySliders, infra_sliders, plans} from "../data/index.jsx";
 import Infrastructure from "./pages/infrastructure/Infrastructure.jsx";
 import Location from "./pages/location/Location.jsx";
 import Gallery from "./pages/gallery/Gallery.jsx";
@@ -26,7 +26,9 @@ const Landing = () => {
             <BackToMain btmRef={backToMainRef}/>
             <Header pageStore={pageStore} isInScroll={!isInView}/>
             <Main pageRef={pageStore.main.pageRef} aboutRef={pageStore.pages.aboutPage.pageRef}/>
-            <About pageRef={pageStore.pages.aboutPage.pageRef}/>
+            <StateContext.Provider value={{mobile: AboutCards, laptop: AboutSliders}}>
+                <About pageRef={pageStore.pages.aboutPage.pageRef}/>
+            </StateContext.Provider>
             <CallToAction />
 
             <StateContext.Provider  value={plans}>
@@ -37,7 +39,9 @@ const Landing = () => {
             </StateContext.Provider>
 
             <Location pageRef={pageStore.pages.locationPage.pageRef}/>
-            <Gallery pageRef={pageStore.pages.galleryPage.pageRef}/>
+            <StateContext.Provider value={GallerySliders}>
+                <Gallery pageRef={pageStore.pages.galleryPage.pageRef}/>
+            </StateContext.Provider>
             <Progress pageRef={pageStore.pages.allInOnePage.pageRef}/>
         </div>
     );

@@ -1,0 +1,43 @@
+@import "../../../../assets/style/variables";
+@import "../../../../assets/style/mixins";
+
+.gallery-modal-container{
+  width: 90vw;
+  display: grid;
+  position: relative;
+  padding: 10px 0;
+  button{
+    position: absolute;
+    top: 50%;
+    @include disableDefaultButtonStyle();
+    >svg{
+      path{
+        stroke: $white;
+      }
+    }
+  }
+  .left-arrow{
+    left: -1%;
+    rotate: 180deg;
+    transform: translateY(50%);
+  }
+  .right-arrow{
+    right: -1%;
+    transform: translateY(-50%);
+  }
+}
+.vie-gallery-modal-slider-container{
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: auto;
+  div{
+    border-radius: 20px;
+    max-height: 80vh;
+  }
+}
+.gallery-modal-slide-img{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+}

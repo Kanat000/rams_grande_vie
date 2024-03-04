@@ -37,6 +37,7 @@
         flex-direction: column;
         position: fixed;
         background-color: $black;
+        padding-top: 109px;
         right: 0;
         top: 0;
         bottom: 0;
@@ -54,6 +55,11 @@
       .header-menu-action-block{
         flex-direction: column;
         flex-grow: 0;
+        row-gap: 20px;
+        .header-call-link{
+          font-size: 30px;
+        }
+
       }
     }
     .header-logo-block{
@@ -282,5 +288,155 @@
     .location-title {
       font-size: 36px;
     }
+  }
+
+
+  //-------Gallery-------
+
+  .vie-gallery-container{
+    grid-row-gap: 30px;
+    position: relative;
+    padding-bottom: 80px;
+
+    .gallery-title-block{
+      font-size: 36px;
+    }
+    .gallery-content-container{
+      display: grid;
+      grid-row-gap: 30px;
+      justify-items: center;
+    }
+    .gallery-controller-block{
+      display: grid;
+    }
+    .vie-gallery-slider-controllers{
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      grid-column-gap: 10px;
+
+      button{
+        width: 50px;
+        height: 50px;
+      }
+      svg{
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+  }
+  .vie-gallery-select-container{
+    width: 50vw;
+    height: fit-content;
+    padding: 10px 20px;
+    .select-current{
+      width: 100%;
+      font-size: 16px;
+      button{
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .select-options{
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+  .vie-gallery-carousel {
+    width: 5000px;
+    height: 410px;
+    .slick-list{
+      padding-left: 20px;
+    }
+  }
+
+  .vie-gallery-slide-container{
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    .slider-modal-opener{
+      button{
+        display: none;
+      }
+    }
+  }
+
+
+  //-------Progress--------
+  .vie-progress-container {
+    margin: 0 20px;
+    grid-template-areas:
+          'contentBlock'
+          'videoBlock'
+          'graphBlock';
+    grid-row-gap: 30px;
+    justify-items: center;
+
+    .progress-content-block {
+      grid-row-gap: 30px;
+      text-align: center;
+      justify-items: center;
+      >div{
+        width: 100%;
+      }
+      h1{
+        font-size: 36px;
+        max-width: 100%;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    .progress-graph-block {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+    }
+  }
+  .vie-progress-video-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .vie-progress-view-container{
+    width: 400px;
+    grid-row-gap: 10px;
+    .progress-info{
+      font-size: 16px;
+    }
+    .progress-graph{
+      height: 5px;
+    }
+  }
+
+  .vie-cta-modal-container{
+    width: 360px;
+    grid-row-gap: 50px;
+    padding: 10px 10px;
+    .cta-modal-header{
+      img{
+        width: 304px;
+      }
+    }
+    .cta-modal-body{
+      padding: 0 30px 30px 30px;
+      .cta-modal-title{
+        h1{
+          font-size: 24px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+
+  .vie-youtube-video-container{
+    width: 90vw;
+    height: 50vw;
   }
 }

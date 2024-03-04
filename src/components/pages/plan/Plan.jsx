@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {StateContext} from "../../Landing.jsx";
 import PlanCard from "./PlanCard.jsx";
 import './scss/plan.scss'
@@ -13,8 +13,18 @@ const Plan = ({pageRef}) => {
         {displayName: 'Террасы', value: 'veranda'}
     ]
 
-    const [selectedRadio, setSelectedRadio] = useState(radio_options[0]);
+    const [selectedRadio, setSelectedRadio] = useState(radio_options[0].value);
+    const [planByFilter, setPlanByFilter] = useState(plans.filter(p => p.rooms===4))
 
+    useEffect(() => {
+        switch (selectedRadio){
+            case '4rooms': setPlanByFilter(plans.filter(p => p.rooms===4));break;
+            case '3rooms': setPlanByFilter(plans.filter(p => p.rooms===3));break;
+            case 'veranda': setPlanByFilter(plans.filter(p => p.type==='veranda'))
+        }
+
+    }, [plans, selectedRadio]);
+    
     return (
         <div className={'vie-plan-container'} ref={pageRef}>
             <div className={'vie-plan-title'}>
@@ -30,7 +40,7 @@ const Plan = ({pageRef}) => {
                 </div>
 
                 <div className={'plan-card-grid-container'}>
-                    {plans.map((plan, index) => {
+                    {planByFilter.map((plan, index) => {
                         const {figure, rooms, area} = plan
                         return <PlanCard figure={figure} rooms={rooms} area={area} key={index}/>
                     })}
