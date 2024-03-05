@@ -6,15 +6,23 @@ import Modal from "../../widgets/modal/Modal.jsx";
 import CtaModal from "../../widgets/CtaModal/CtaModal.jsx";
 import FadeUp from "../../widgets/animation/FadeUp.jsx";
 import CustomFade from "../../widgets/animation/CustomFade.jsx";
+import MainPlaySvg from "../../../assets/svg/MainPlaySVG.jsx";
 
 const Main = ({pageRef, aboutRef}) => {
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [ctaModalIsOpen, setCtaModalIsOpen] = useState(false)
+    const [videpModalIsOpen, setVideoModalIsOpen] = useState(false)
     const fluidFadeDown = {hidden: {y: "-100%"}, visible: {y: 0}}
     const arrowFadeIn = {hidden: {opacity: 0}, visible: {opacity: 1}}
     return (
         <div className={'vie-main-container'} ref={pageRef}>
-            <Modal visible={modalIsOpen} setVisible={setModalIsOpen}>
+            <Modal visible={ctaModalIsOpen} setVisible={setCtaModalIsOpen}>
                 <CtaModal/>
+            </Modal>
+            <Modal visible={videpModalIsOpen} setVisible={setVideoModalIsOpen}>
+                <iframe className={'vie-youtube-video-container'} src="https://www.youtube.com/embed/2VxXD-gqPdk?si=85dchQVBUz91IGiV"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen></iframe>
             </Modal>
             <div className={'main-inner-container'}>
                 <div className={'main-content'}>
@@ -24,7 +32,7 @@ const Main = ({pageRef, aboutRef}) => {
                     </div>
                     <div className={'main-cta'} style={{overflow: "hidden"}}>
                         <FadeUp delay={0.7}>
-                            <button onClick={() => setModalIsOpen(true)}>Оставить заявку</button>
+                            <button onClick={() => setCtaModalIsOpen(true)}>Оставить заявку</button>
                         </FadeUp>
                     </div>
                 </div>
@@ -42,7 +50,12 @@ const Main = ({pageRef, aboutRef}) => {
                                 </CustomFade>
                             </div>
                         </button>
+
+                        <div className={'main-video-play-svg'} onClick={()=>setVideoModalIsOpen(true)}>
+                            <MainPlaySvg />
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

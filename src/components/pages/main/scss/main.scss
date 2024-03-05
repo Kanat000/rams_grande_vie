@@ -47,6 +47,7 @@
       }
       @include useFontStyle($fc: $white)
     }
+
   }
 
   .main-figure{
@@ -55,15 +56,29 @@
     height: 35.5vw;
     bottom: -24vw;
     left: 3.333vw;
-    background-image: url("../../../../assets/image/vie-main-figure.png");
+    background-image: url("../../../../assets/image/vie-main-figure.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 12px;
   }
   .main-figure-inner-container{
     width: 100%;
     height: 100%;
     position: relative;
+    .main-video-play-svg{
+      position: absolute;
+      right: 35px;
+      top: -65px;
+      width: 130px;
+      height: 130px;
+      cursor: pointer;
+      svg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     >button{
       width: 14.75vw;
       height: 4.5vw;

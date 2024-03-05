@@ -1,6 +1,6 @@
 import React from 'react';
 import CtaForm from "./form/CtaForm.jsx";
-import ctaFigure from '../../../assets/image/cta/cta-figure.png'
+import ctaFigure from '../../../assets/image/cta/cta-figure.webp'
 import './scss/ctaPage.scss'
 import FadeUp from "../../widgets/animation/FadeUp.jsx";
 

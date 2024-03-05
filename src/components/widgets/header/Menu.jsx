@@ -7,7 +7,6 @@ import {switchActiveLink} from "../../../utils/SwitchActiveLink.js";
 const Menu = () => {
     const navContext = useContext(NavContext)
     const pages = Object.values(navContext)
-    console.log(pages)
     useEventListener({event: "scroll", handler: () => switchActiveLink(pages), depsArray: []})
 
     return (

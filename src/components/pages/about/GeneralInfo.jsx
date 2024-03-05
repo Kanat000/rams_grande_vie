@@ -1,5 +1,5 @@
 import React from 'react';
-import generalAboutPng from '../../../assets/image/about/general-about-figure.png'
+import generalAboutPng from '../../../assets/image/about/general-about-figure.webp'
 
 const GeneralInfo = () => {
     return (
