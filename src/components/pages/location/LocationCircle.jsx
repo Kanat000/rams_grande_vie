@@ -9,6 +9,7 @@ const LocationCircle = ({location, car_time, walking_time}) => {
     const locationParagraphs = location.toString().split(/\n/);
 
     return (
+
         <div className={'vie-location-circle'}>
             <div className={'vie-location-inner-container'}>
                 <div className={'circle-title-container'}>

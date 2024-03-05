@@ -39,8 +39,11 @@
       background-color: transparent;
       cursor: pointer;
       transition: .3s ease-in-out;
+      box-sizing: border-box;
       &:hover{
         padding: 1.25vw 3.5vw;
+        background-color: $white;
+        color: $black;
       }
       @include useFontStyle($fc: $white)
     }
@@ -70,17 +73,42 @@
       left: 50%;
       transform: translateX(-50%);
       transition: .3s ease-in-out;
-      &:hover{
-        svg{
-          transform: scale(1.2);
-        }
-      }
-      svg{
+      .scroll-fluid{
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: .3s ease-in-out;
+        svg{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .scroll-arrow{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top:0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        svg{
+          width: 1.167vw;
+          height: 1.833vw;
+          animation: _arrow_as_spring infinite 1.5s ease-in-out;
+        }
       }
     }
+  }
+}
+
+@keyframes _arrow_as_spring {
+  0%{
+    transform: translateY(-50%);
+  }
+  50%{
+    transform: translateY(20%);
+  }
+  100%{
+    transform: translateY(-50%);
   }
 }

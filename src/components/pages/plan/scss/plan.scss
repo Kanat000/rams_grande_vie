@@ -13,7 +13,7 @@
     display: grid;
     justify-content: center;
     height: 7vw;
-    >svg{
+    svg{
       width: auto;
       height: 100%;
       object-fit: contain;
@@ -100,7 +100,11 @@
         width: 100%;
         height: 100%;
         background-color: $brown;
-        @include useFontStyle($fc:$white)
+        @include useFontStyle($fc:$white);
+        transition: .3s ease-in-out;
+        &:hover{
+          background-color: #734430;
+        }
       }
     }
 

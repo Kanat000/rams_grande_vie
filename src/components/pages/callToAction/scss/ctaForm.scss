@@ -26,7 +26,8 @@
       cursor: pointer;
       transition: .3s ease-in-out;
       &:hover{
-        border-color: $brown;
+        background-color: $white;
+        color: $black;
       }
       @include useFontStyle($fc: $white)
     }

@@ -5,7 +5,8 @@ import {scrollToView} from "../../../utils/scrollToView.js";
 const MenuItem = ({item}) => {
     const {name, link, pageRef, linkRef} = item
     return (
-        <Link to={link} className={'menu-item'} ref={linkRef} onClick={()=>scrollToView(pageRef)}>
+        <Link to={link} className={'menu-item'}
+              ref={linkRef} onClick={()=>scrollToView(pageRef)}>
             {name}
         </Link>
     );

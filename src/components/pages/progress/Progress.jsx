@@ -5,6 +5,7 @@ import ProgressVideo from "./ProgressVideo.jsx";
 import {useInView} from "framer-motion";
 import {useSmoothCountUpEffect} from "../../../hooks/useSmoothCountUpEffect.js";
 import Modal from "../../widgets/modal/Modal.jsx";
+import FadeUp from "../../widgets/animation/FadeUp.jsx";
 
 const Progress = ({pageRef}) => {
     const progressGraphRef = useRef();
@@ -15,7 +16,7 @@ const Progress = ({pageRef}) => {
     return (
         <div className={'vie-progress-container'} ref={pageRef}>
             <div className={'progress-content-block'}>
-                <h1>Ход строительства</h1>
+                <h1><FadeUp>Ход строительства</FadeUp></h1>
                 <div>
                    <p>Рады поделиться с вами ходом строительства клубной резиденции Grande Vie!</p>
                    <br />

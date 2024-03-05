@@ -2,16 +2,17 @@ import React from 'react';
 import {InfraStructureTitleSvg} from "../../../assets/svg/VieSvgStore.jsx";
 import './scss/infrastructure.scss'
 import InfraCarousel from "./InfraCarousel.jsx";
+import FadeUp from "../../widgets/animation/FadeUp.jsx";
 const Infrastructure = ({pageRef}) => {
     return (
         <div className={'vie-infrastructure-container'} ref={pageRef}>
             <div className={'infra-title-grid'}>
                 <div>
                     <div className={'infra-svg-title'}>
-                        <InfraStructureTitleSvg />
+                        <FadeUp><InfraStructureTitleSvg /></FadeUp>
                     </div>
                     <h1 className={'infra-h1-title'}>
-                        rooms
+                        <FadeUp delay={0.5}>rooms</FadeUp>
                     </h1>
                 </div>
                 <div>

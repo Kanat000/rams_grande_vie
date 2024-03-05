@@ -50,6 +50,13 @@
         text-decoration: none;
         color: $beige;
         opacity: 0.5;
+        transition: .3s ease-in-out;
+        &:hover{
+          opacity: 1;
+        }
+      }
+      a.active-head-menu-link{
+        opacity: 1;
       }
     }
 
@@ -59,6 +66,12 @@
       justify-content: center;
       align-items: center;
       flex-grow: 1;
+    }
+    .header-call-link{
+      cursor: pointer;
+      &:hover{
+        opacity: 0.6;
+      }
     }
 
     .header-lang-select-block{

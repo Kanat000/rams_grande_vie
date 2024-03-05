@@ -19,6 +19,9 @@ h1,h2,h3,h4,h5, p{
   font-weight: normal;
   font-size: unset;
 }
+h1{
+  overflow: hidden;
+}
 
 @font-face {
   font-family: 'TT Interfaces Bold';
